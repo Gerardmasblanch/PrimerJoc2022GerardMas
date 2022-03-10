@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Joc de godot"
+run/main_scene="res://pantallaprincipal.tscn"
 config/icon="res://icon.png"
 
 [physics]
