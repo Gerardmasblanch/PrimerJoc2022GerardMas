@@ -1,16 +1,95 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 243.5, 24.5 )
+extents = Vector2( 62.5, 25.4063 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 413, 41 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 20, 62 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 3.5, 85 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 57, 19 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 211.75, 17.875 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 22.5, 90 )
 
 [node name="TErra BAse" type="StaticBody2D"]
+position = Vector2( 190, -21 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -241.0
+margin_left = 34.0
 margin_top = -27.0
 margin_right = 246.0
 margin_bottom = 22.0
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 248.0
+margin_top = -59.0
+margin_right = 1223.0
+margin_bottom = 23.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = -104.0
+margin_top = -102.0
+margin_right = -4.0
+margin_bottom = 22.0
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = -190.0
+margin_top = -148.0
+margin_right = -150.0
+margin_bottom = 23.0
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_left = 11.0
+margin_top = -321.0
+margin_right = 200.0
+margin_bottom = -281.0
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+margin_left = 427.0
+margin_top = -427.0
+margin_right = 620.0
+margin_bottom = -387.0
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+margin_left = 1140.0
+margin_top = -531.0
+margin_right = 1180.0
+margin_bottom = -352.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 2.5, -2.5 )
+position = Vector2( 95.5, -3 )
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 808, -18 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( -50, -40 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2( -166.5, -62 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2( 91, -302 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2( 641.25, -405 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2( 1160.5, -440 )
+shape = SubResource( 7 )
