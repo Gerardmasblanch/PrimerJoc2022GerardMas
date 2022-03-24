@@ -37,17 +37,10 @@ func anima(velocitat):
 		$AnimatedSprite.play("salta")
 
 
+
 func _on_Area2D_body_entered(body):
-	get_tree().change_scene("res://escenes/cosos/pantalla cossos.tscn")
+	get_tree().change_scene("res://escenes/cosos/Escena2.tscn")
 
 
-
-
-
-
-
-
-
-
-
-
+func _on_Portal_2_body_entered(body):
+	get_tree().change_scene("res://escenes/cosos/Escena 3.tscn")

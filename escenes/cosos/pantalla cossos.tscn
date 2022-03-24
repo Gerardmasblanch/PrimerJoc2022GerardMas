@@ -1,12 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://escenes/cosos/Terra base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenes/cosos/personatgecos.tscn" type="PackedScene" id=2]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.8125, 78 )
+
 [node name="pantalla cossos" type="Node2D"]
+position = Vector2( 3, -6 )
 
 [node name="Terra" parent="." instance=ExtResource( 1 )]
 position = Vector2( 189, 577 )
 
 [node name="personatgecos" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1199, 21 )
+position = Vector2( 831, 260 )
+
+[node name="portal 1" type="Area2D" parent="."]
+position = Vector2( 899, 91 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal 1"]
+position = Vector2( 94.1875, 53 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="portal 1"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 72.0
+margin_top = -19.0
+margin_right = 112.0
+margin_bottom = 128.0
+
+[connection signal="body_entered" from="portal 1" to="personatgecos" method="_on_Area2D_body_entered"]

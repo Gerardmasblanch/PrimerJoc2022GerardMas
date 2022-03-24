@@ -4,6 +4,7 @@
 [ext_resource path="res://escenes/personatge/Zona.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 19, 3 )
 
 [node name="Zona" parent="." groups=["Inici"] instance=ExtResource( 2 )]
 position = Vector2( 306, 295 )
