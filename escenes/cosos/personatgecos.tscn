@@ -8,6 +8,11 @@
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "corre",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "salta",
@@ -17,25 +22,20 @@ animations = [ {
 "loop": true,
 "name": "quiet",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "corre",
-"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29, 55.5 )
+extents = Vector2( 15, 30 )
 
 [node name="personatgecos" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -9.50002, -30 )
-scale = Vector2( 0.851563, 0.71875 )
+position = Vector2( 11, 2 )
+scale = Vector2( 0.539063, 0.527344 )
 frames = SubResource( 2 )
 animation = "salta"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -10, 6.5 )
+position = Vector2( 10, 34 )
 shape = SubResource( 1 )

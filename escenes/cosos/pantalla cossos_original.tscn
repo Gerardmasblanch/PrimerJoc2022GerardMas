@@ -1,23 +1,22 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Imatges/IYYPby.png" type="Texture" id=1]
 [ext_resource path="res://escenes/cosos/personatgecos.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Imatges/portal2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 142.375, 10 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 515, 33.5 )
+extents = Vector2( 514, 33.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 142.5, 10 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 151, 10 )
+extents = Vector2( 118, 10 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 65.5, 84 )
+extents = Vector2( 21.8125, 78 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 19.5, 13 )
@@ -37,7 +36,7 @@ position = Vector2( 139.625, 387 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="fons"]
-position = Vector2( 512, 577 )
+position = Vector2( 511, 577 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="fons"]
@@ -45,23 +44,25 @@ position = Vector2( 362.5, 175 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="fons"]
-position = Vector2( 770, 155 )
+position = Vector2( 737, 155 )
 shape = SubResource( 6 )
 
 [node name="personatgecos" parent="." instance=ExtResource( 2 )]
 position = Vector2( 51, 56 )
 
 [node name="portal 1" type="Area2D" parent="."]
-position = Vector2( 924, 5 )
-
-[node name="Sprite" type="Sprite" parent="portal 1"]
-position = Vector2( -29.75, 68 )
-scale = Vector2( 0.322973, 0.27 )
-texture = ExtResource( 3 )
+position = Vector2( 906, 34 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal 1"]
-position = Vector2( -33, 69 )
+position = Vector2( -34, 68 )
 shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="portal 1"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -54.0
+margin_top = -13.0
+margin_right = -14.0
+margin_bottom = 134.0
 
 [node name="aguentador V 2" type="Area2D" parent="."]
 
@@ -76,4 +77,4 @@ color = Color( 1, 0, 0.211765, 1 )
 position = Vector2( 422.5, 429 )
 shape = SubResource( 3 )
 
-[connection signal="body_entered" from="aguentador V 2" to="personatgecos" method="_on_aguentador_V_2_body_entered"]
+[connection signal="body_entered" from="portal 1" to="personatgecos" method="_on_portal_1_body_entered"]

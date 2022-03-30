@@ -6,6 +6,7 @@ var velocitat = Vector2.ZERO
 var direccio  = Vector2.DOWN
 var gravetat  = Vector2.DOWN*980
 var velocitat_salt = -625
+var positio_inicial = position
 
 func _physics_process(delta):
 	velocitat.x = 0
@@ -37,10 +38,17 @@ func anima(velocitat):
 		$AnimatedSprite.play("salta")
 
 
-
-func _on_Area2D_body_entered(body):
+func _on_portal_1_body_entered(body):
 	get_tree().change_scene("res://escenes/cosos/Escena2.tscn")
 
 
-func _on_Portal_2_body_entered(body):
-	get_tree().change_scene("res://escenes/cosos/Escena 3.tscn")
+func _on_Augmentador_de_velocitat_body_entered(body):
+	velocitat_salt = -850
+
+func _process(delta):
+	if position.y == 601:
+		position = position
+
+
+func _on_aguentador_V_2_body_entered(body):
+	velocitat_salt = -850

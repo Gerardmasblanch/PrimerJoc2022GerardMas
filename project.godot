@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Joc de godot"
-run/main_scene="res://escenes/cosos/pantalla cossos.tscn"
+run/main_scene="res://escenes/cosos/pantalla cossos_original.tscn"
 config/icon="res://Imatges/icon.png"
 
 [input]
