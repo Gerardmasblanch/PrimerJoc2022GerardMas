@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal4.jpg-be45bd7d2c266df467467ccbffc03898.stex"
+path="res://.import/fons3.png-2cd4e4d374f4ab2868334ce35a2b97a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://portal4.jpg"
-dest_files=[ "res://.import/portal4.jpg-be45bd7d2c266df467467ccbffc03898.stex" ]
+source_file="res://Imatges/fons3.png"
+dest_files=[ "res://.import/fons3.png-2cd4e4d374f4ab2868334ce35a2b97a9.stex" ]
 
 [params]
 

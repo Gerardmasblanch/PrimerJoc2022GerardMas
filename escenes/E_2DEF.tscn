@@ -1,0 +1,153 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://escenes/cosos/personatgecos.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Imatges/fons3.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 213, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 46.25, 25.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 27, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 49.75, 20 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 46.5, 12 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 49.5, 18 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 66, 10 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 48.5, 12.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 14, 113.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 50, 21.5 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 76.75, 10 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 18, 139 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 164.5, 22 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 19.75, 69.75 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 16, 21 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 4, -6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Fons3" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 507, 217.625 )
+scale = Vector2( 1.02722, 1.41314 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 207, 525 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 240.75, 490.5 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 345, 358 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 573.25, 352 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 145.5, 272 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 342, 196 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 460, 180 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 866.5, 270.5 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 803, 123.5 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 804, 489.5 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 935.25, 520 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 15, 373 )
+shape = SubResource( 16 )
+
+[node name="personatgecos" parent="." instance=ExtResource( 1 )]
+position = Vector2( 61, 447 )
+
+[node name="suc tòxic" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suc tòxic"]
+position = Vector2( 585.5, 578 )
+shape = SubResource( 6 )
+
+[node name="portal 1" type="Area2D" parent="."]
+position = Vector2( 906, 34 )
+
+[node name="ColorRect" type="ColorRect" parent="portal 1"]
+margin_left = 57.0
+margin_top = 334.0
+margin_right = 92.0
+margin_bottom = 468.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal 1"]
+position = Vector2( 76, 400 )
+shape = SubResource( 14 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 375, 489 )
+shape = SubResource( 15 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 37.0
+margin_top = 322.0
+margin_right = 204.0
+margin_bottom = 421.0
+text = " agafa el augmentador de 
+ salt que es situa a 
+ la bora del àcid 
+ i compte, no el toquis!
+
+
+"
+
+[connection signal="body_entered" from="suc tòxic" to="personatgecos" method="_on_suc_txic_body_entered"]
+[connection signal="body_entered" from="portal 1" to="personatgecos" method="_on_portal_1_body_entered"]
+[connection signal="body_entered" from="Area2D" to="personatgecos" method="_on_Area2D_body_entered"]

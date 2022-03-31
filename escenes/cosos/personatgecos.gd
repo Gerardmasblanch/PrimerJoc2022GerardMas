@@ -5,7 +5,7 @@ var velocitat_base = 200
 var velocitat = Vector2.ZERO
 var direccio  = Vector2.DOWN
 var gravetat  = Vector2.DOWN*980
-var velocitat_salt = -625
+var velocitat_salt = -350
 var positio_inicial = position
 
 func _physics_process(delta):
@@ -39,16 +39,15 @@ func anima(velocitat):
 
 
 func _on_portal_1_body_entered(body):
-	get_tree().change_scene("res://escenes/cosos/Escena2.tscn")
-
-
-func _on_Augmentador_de_velocitat_body_entered(body):
-	velocitat_salt = -850
-
-func _process(delta):
-	if position.y == 601:
-		position = position
-
+	get_tree().change_scene("res://escenes/cosos/pantalla cossos_original.tscn")
 
 func _on_aguentador_V_2_body_entered(body):
-	velocitat_salt = -850
+	velocitat_salt = -650
+
+
+func _on_suc_txic_body_entered(body):
+	position = Vector2(26,278)
+
+
+func _on_Area2D_body_entered(body):
+	velocitat_salt= -500
